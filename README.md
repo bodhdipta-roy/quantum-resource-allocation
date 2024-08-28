@@ -26,11 +26,17 @@ Before using IBMQ, you must install `qiskit` and set up your Python environment.
    python -m venv myenv
    myenv\Scripts\activate  # replace 'myenv' with your folder/file name as required
 
-
-
 2. **Run 'Jupyter Notebook' within the folder using terminal.**
 
 3. **Use the code that I've uploaded and edit it accordingly.**
+
+4. **Updating IBM Cloud API Token**
+
+   This code snippet is present before the final code. Paste the API Token that you copy from the IBM Website in the place of "YOUR_API_TOKEN"
+   
+    ```python
+    from qiskit_ibm_runtime import QiskitRuntimeService
+    QiskitRuntimeService.save_account(channel="ibm_quantum", token="YOUR_API_TOKEN") #use the Token from the "IBM Quantum Platform" page of your profile.
 
 ### 3. Additional Requirements and Resources.
 

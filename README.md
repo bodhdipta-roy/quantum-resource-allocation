@@ -1,4 +1,4 @@
-# Code for the Confernece Paper "Dynamic Resource Allocation using Second Price Auction in Quantum Cloud Computing" 
+# Code for the Conference Paper "Dynamic Resource Allocation using Second Price Auction in Quantum Cloud Computing" 
 # IBM Quantum Setup Guide
 
 This repository provides instructions on how to create an IBM Quantum (IBMQ) account and how to use it in your Python projects. Additionally, an example code snippet is provided to get you started with accessing IBMQ resources.
@@ -25,6 +25,8 @@ Before using IBMQ, you must install `qiskit` and set up your Python environment.
    ```bash
    python -m venv myenv
    myenv\Scripts\activate  # replace 'myenv' with your folder/file name as required
+
+
 
 2. **Run 'Jupyter Notebook' within the folder using terminal.**
 

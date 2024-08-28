@@ -25,3 +25,14 @@ Before using IBMQ, you must install `qiskit` and set up your Python environment.
    ```bash
    python -m venv myenv
    myenv\Scripts\activate  # replace 'myenv' with your folder/file name as required
+
+2. **Run 'Jupyter Notebook' within the folder using terminal.**
+
+3. **Use the code that I've uploaded and edit it accordingly.**
+
+### 3. Additional Requirements and Resources.
+
+1. [Qiskit Documentation](https://docs.quantum.ibm.com/guides/hello-world)
+   
+2. [Qiskit IBM Quantum Runtime Documentation](https://github.com/Qiskit/qiskit-ibm-runtime?tab=readme-ov-file#account-setup)
+   

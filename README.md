@@ -124,9 +124,8 @@ MIT License
 - Qiskit team for providing the quantum computing framework
 
 ## Authors & Contributors
-## Contributors
 
 <a href="https://github.com/bodhdipta-roy">
-  <img src="https://avatars.githubusercontent.com/username1" width="100px;" alt="bodhdipta-roy"/>
+  <img src="https://avatars.githubusercontent.com/bodhdipta-roy" width="100px;" alt="bodhdipta-roy"/>
 </a>
 

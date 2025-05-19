@@ -1,46 +1,124 @@
-# Code for the Conference Paper "Dynamic Resource Allocation using Second Price Auction in Quantum Cloud Computing" 
-# IBM Quantum Setup Guide
+# Quantum Resource Allocation through Second-Price Auctions
 
-This repository provides instructions on how to create an IBM Quantum (IBMQ) account and how to use it in your Python projects. Additionally, an example code snippet is provided to get you started with accessing IBMQ resources.
+This repository implements a hybrid classical-quantum approach for quantum resource allocation using second-price (Vickrey) auctions as described in the paper "Quantum Resource Allocation through Second-Price Auctions: A Hybrid Classical-Quantum Approach."
 
-## Getting Started
+## Paper Reference
 
-### 1. Create an IBM Quantum Account
+[Link to paper will be added upon publication]
 
-To use IBM's quantum computers, you'll need an IBM Quantum (IBMQ) account. Follow these steps to create one:
+## Overview
 
-1. Visit the [IBM Quantum Experience](https://quantum-computing.ibm.com/) website.
-2. Click on the **Sign Up** button. 
-3. Fill in the required details and complete the registration process.
-4. After registration, log in to your IBM Quantum account.
-5. Navigate to your **Account Settings** by clicking your profile icon in the top-right corner.
-6. Under **API Token**, click on the **Copy** button to copy your API token. This token will be used to authenticate your access to IBMQ resources.
+As quantum computing resources remain scarce and expensive, efficient allocation mechanisms are crucial for their optimal utilization. This project implements a second-price auction system for quantum resource allocation, where:
 
-### 2. Setting Up the Environment
+1. The highest bidder wins the resource
+2. The winner pays the second-highest bid price
+3. This mechanism encourages truthful bidding
 
-Before using IBMQ, you must install `qiskit` and set up your Python environment.
+The implementation also includes a quantum job execution component that demonstrates how allocated resources would be used to run quantum circuits, specifically creating entangled qubits.
 
-1. **Create a Python Virtual Environment:**
+## Key Features
 
-   ```bash
-   python -m venv myenv
-   myenv\Scripts\activate  # replace 'myenv' with your folder/file name as required
+- **Second-Price Auction Mechanism**: Implements the Vickrey auction for resource allocation
+- **Quantum Circuit Execution**: Demonstrates post-allocation usage with a 5-qubit entanglement circuit
+- **Simulation and Analysis Tools**: Includes visualization and statistical analysis of auction outcomes
+- **Multi-simulation Support**: Runs multiple auction scenarios to evaluate mechanism performance
 
-2. **Run 'Jupyter Notebook' within the folder using terminal.**
+## Requirements
 
-3. **Use the code that I've uploaded and edit it accordingly.**
+- Python 3.8 or higher
+- NumPy
+- Qiskit and Qiskit-Aer
+- Matplotlib
 
-4. **Updating IBM Cloud API Token**
+## Installation
 
-   This code snippet is present before the final code. Paste the API Token that you copy from the IBM Website in the place of "YOUR_API_TOKEN"
-   
-    ```python
-    from qiskit_ibm_runtime import QiskitRuntimeService
-    QiskitRuntimeService.save_account(channel="ibm_quantum", token="YOUR_API_TOKEN") #use the Token from the "IBM Quantum Platform" page of your profile.
+```bash
+# Create and activate a virtual environment (optional but recommended)
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-### 3. Additional Requirements and Resources.
+# Install dependencies
+pip install numpy qiskit qiskit-aer matplotlib
+```
 
-1. [Qiskit Documentation](https://docs.quantum.ibm.com/guides/hello-world)
-   
-2. [Qiskit IBM Quantum Runtime Documentation](https://github.com/Qiskit/qiskit-ibm-runtime?tab=readme-ov-file#account-setup)
-   
+## Usage
+
+Run the main script to execute both a single detailed simulation and multiple simulations for statistical analysis:
+
+```bash
+python quantum_auction_algorithm.py
+```
+## Alternative Usage
+
+You can also use the Jupyter Notebook provided in the `notebooks` directory for an interactive experience:
+
+```bash
+jupyter notebook notebooks/quantum_auction_analysis.ipynb
+```
+
+The program generates:
+
+1. **Detailed Single Simulation Results**:
+   - Resource allocations
+   - User bids and payments
+   - Quantum circuit execution outcomes
+
+2. **Statistical Analysis**:
+   - Average winning bids and payments
+   - Visualizations of bid distributions
+   - Trend analysis across multiple simulations
+
+## Implementation Details
+
+### Auction Mechanism
+
+The core of the implementation is the `QuantumResourceAuction` class which:
+- Determines the highest and second-highest bids for each resource
+- Allocates resources to the highest bidders
+- Calculates payments based on second-highest bids
+- Ensures incentive compatibility (truthful bidding)
+
+### Quantum Circuit
+
+After resource allocation, the system executes a 5-qubit quantum circuit that:
+- Applies a Hadamard gate to the first qubit to create superposition
+- Uses CNOT gates to entangle this qubit with four other qubits
+- Measures all qubits to demonstrate the entanglement effects
+
+## Customization
+
+You can modify these parameters in the code:
+- `num_resources`: Number of quantum resources available
+- `num_users`: Number of users participating in the auction
+- `min_bid` and `max_bid`: Range for random bid generation
+- `num_simulations`: Number of auction scenarios to run
+
+## Theoretical Basis
+
+The implementation is based on the Vickrey-Clarke-Groves (VCG) mechanism, which:
+- Maximizes social welfare
+- Encourages truthful bidding as the dominant strategy
+- Efficiently allocates resources to those who value them most
+
+## Future Extensions
+
+- Integration with real quantum hardware providers
+- Dynamic pricing based on resource quality and availability
+- Multi-resource bundle auctions for complex quantum workflows
+- Machine learning integration for predictive bidding
+
+## Citation
+
+If you use this code in your research, please cite the original paper:
+
+```
+[Will be added upon publication]
+```
+
+## License
+
+MIT License
+
+## Acknowledgments
+
+- Qiskit team for providing the quantum computing framework

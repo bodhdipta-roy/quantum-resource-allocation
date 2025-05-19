@@ -115,10 +115,6 @@ If you use this code in your research, please cite the original paper:
 [Will be added upon publication]
 ```
 
-## License
-
-MIT License
-
 ## Acknowledgments
 
 - Qiskit team for providing the quantum computing framework

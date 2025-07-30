@@ -3,8 +3,7 @@
 This repository implements a hybrid classical-quantum approach for quantum resource allocation using second-price (Vickrey) auctions as described in the paper "Quantum Resource Allocation through Second-Price Auctions: A Hybrid Classical-Quantum Approach."
 
 ## Paper Reference
-
-[Link to paper will be added upon publication]
+https://ieeexplore.ieee.org/document/11087969
 
 ## Overview
 
@@ -110,9 +109,24 @@ The implementation is based on the Vickrey-Clarke-Groves (VCG) mechanism, which:
 ## Citation
 
 If you use this code in your research, please cite the original paper:
+1. Plain Text
+```
+B. Roy, K. Das, B. Dutta, H. K. Mittal, A. Bandyopadhyay and N. Sharma, "Quantum Resource Allocation through Second-Price Auctions: A Hybrid Classical-Quantum Approach," 2025 Seventh International Conference on Computational Intelligence andCommunication Technologies (CCICT), Sonepat, India, 2025, pp. 296-301, doi: 10.1109/CCICT65753.2025.00053. keywords: {Cloud computing;Quantum computing;Computational modeling;Dynamic scheduling;Mathematical models;Complexity theory;Resource management;Computational intelligence;Quantum Cloud Computing;Dynamic Resource Allocation;Vickrey-Clarke-Groves (VCG) Mechanism;Second Price Auction},
 
 ```
-[Will be added upon publication]
+2. BibTex
+```
+@INPROCEEDINGS{11087969,
+  author={Roy, Bodhdipta and Das, Koushiki and Dutta, Biswarupayan and Mittal, Harish Kumar and Bandyopadhyay, Anjan and Sharma, Neeraj},
+  booktitle={2025 Seventh International Conference on Computational Intelligence andCommunication Technologies (CCICT)}, 
+  title={Quantum Resource Allocation through Second-Price Auctions: A Hybrid Classical-Quantum Approach}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={296-301},
+  keywords={Cloud computing;Quantum computing;Computational modeling;Dynamic scheduling;Mathematical models;Complexity theory;Resource management;Computational intelligence;Quantum Cloud Computing;Dynamic Resource Allocation;Vickrey-Clarke-Groves (VCG) Mechanism;Second Price Auction},
+  doi={10.1109/CCICT65753.2025.00053}}
+
 ```
 
 ## Acknowledgments

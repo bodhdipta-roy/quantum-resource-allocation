@@ -2,7 +2,7 @@
 
 This repository implements a hybrid classical-quantum approach for quantum resource allocation using second-price (Vickrey) auctions as described in the paper "Quantum Resource Allocation through Second-Price Auctions: A Hybrid Classical-Quantum Approach."
 
-## Paper Reference
+## Paper Link
 https://ieeexplore.ieee.org/document/11087969
 
 ## Overview

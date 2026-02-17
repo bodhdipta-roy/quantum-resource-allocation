@@ -1,5 +1,7 @@
 # Quantum Resource Allocation through Second-Price Auction
 
+**Authors**: Bodhdipta Roy,
+
 This repository implements a hybrid classical-quantum approach for quantum resource allocation using second-price (Vickrey) auctions as described in the paper "Quantum Resource Allocation through Second-Price Auctions: A Hybrid Classical-Quantum Approach."
 
 ## Paper Link
